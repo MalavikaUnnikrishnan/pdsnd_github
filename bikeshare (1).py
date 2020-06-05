@@ -17,18 +17,18 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data! \n Choose from the following \n 1.Chicago\n2.New York\n3.Washington\n')
+    print('Hello! Let\'s explore some US bikeshare data! \n Choose from the following \n a.Chicago\nb.New York\nc.Washington\n')
     
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     
-    city = int(input('Which city data do you want to explore (options 1,2 or 3)? \n '))
+    city = input('Which city data do you want to explore (options a,b or c)? \n ')
     
-    while (city != 1 and city !=2 and city !=3):
+    while (city != 'a' and city != 'b' and city != 'c'):
         
-        print('\nInvalid input , please choose from the options 1.Chicago , 2.New York , 3.Washington\n')
-        city = int(input('Which city data do you want to explore (options 1,2 or 3)? \n '))
+        print('\nInvalid input , please choose from the options a.Chicago , b.New York , c.Washington\n')
+        city = input('Which city data do you want to explore (options a,b or c)? \n ')
     
-    print('From the choices ,1.Chicago , 2.New York , 3.Washington\n , We will look into the data of city ', city)
+    print('From the choices ,a.Chicago , b.New York , c.Washington\n , We will look into the data of city {}'.format(city))
     
     # TO DO: get user input for month (all, january, february, ... , june)
     
@@ -49,12 +49,12 @@ def get_filters():
         print('Please enter a valid day of teh week ( all days of the week or specifically monday to sunday? )')
         day = input('Which day of the week data do you wish to look into ( all days of the week or specifically monday to sunday? )').lower()
     
-    print('Let us look into',month)
-    print('Let us look into',day)
+    print('Let us look into {}'.format(month))
+    print('Let us look into {}'.format(day))
 
-    if (city == 1):
+    if (city == 'a'):
         city = 'chicago'
-    elif(city == 2):
+    elif(city == 'b'):
         city = 'new york city'   
     else:
         city = 'washington'
