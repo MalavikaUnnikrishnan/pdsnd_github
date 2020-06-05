@@ -28,7 +28,7 @@ def get_filters():
         print('\nInvalid input , please choose from the options a.Chicago , b.New York , c.Washington\n')
         city = input('Which city data do you want to explore (options a,b or c)? \n ')
     
-    print('From the choices ,a.Chicago , b.New York , c.Washington\n , We will look into the data of city ', city)
+    print('From the choices ,a.Chicago , b.New York , c.Washington\n , We will look into the data of city {}'.format(city))
     
     # TO DO: get user input for month (all, january, february, ... , june)
     
@@ -49,8 +49,8 @@ def get_filters():
         print('Please enter a valid day of teh week ( all days of the week or specifically monday to sunday? )')
         day = input('Which day of the week data do you wish to look into ( all days of the week or specifically monday to sunday? )').lower()
     
-    print('Let us look into',month)
-    print('Let us look into',day)
+    print('Let us look into {}'.format(month))
+    print('Let us look into {}'.format(day))
 
     if (city == 'a'):
         city = 'chicago'
